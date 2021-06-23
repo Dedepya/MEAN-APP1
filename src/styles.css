@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+.form-control{
+    border:none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+   box-shadow: none !important;
+   
+}
+
+.form-control:focus {
+   border-bottom: 3px solid rgb(55, 196, 55);
+}
+
+ .active{
+    font-size: large;
+   
+}  
+
+nav .navbar-nav li a{
+   
+   color: rgb(0, 225, 255) !important;
+}
