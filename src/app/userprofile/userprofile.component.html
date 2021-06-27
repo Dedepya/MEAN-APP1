@@ -1,8 +1,24 @@
-<h3 class="text-end text-primary">Welcome, <span class="text-warning">{{userObj.username}}</span></h3>
+<h4 class="text-end text-secondary">Welcome, <span style="color:#1e5a7f">{{userObj.username}} <img
+    src={{userObj.profileImage}} width="60px" alt="">
+<h6>{{userObj.email}}</h6>
+</span></h4>
 
-<div class="text-center">
-    <h2>Email : {{userObj.email}}</h2>
-    <h2>Date of birth : {{userObj.dob}}</h2>
-    <img src={{userObj.profileImage}} alt="" width="200px">
-    <button class="btn btn-primary mt-2" (click)="getPrivateData()">Get private data</button>
+<ul class="nav nav-tabs nav-justified ">
+<li class="nav-item">
+<a class="nav-link" routerLinkActive="active" routerLink="view-products">
+    <i class="far fa-eye text-warning"></i> View products
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" routerLinkActive="active" routerLink="view-cart">
+    <i class="fas fa-cart-arrow-down" style="color: #ec2399;"></i>
+    Cart <span class="badge bg-dark text-white ms-2">{{count}}</span>
+</a>
+</li>
+
+</ul>
+
+
+<div class="container mt-5">
+<router-outlet></router-outlet>
 </div>

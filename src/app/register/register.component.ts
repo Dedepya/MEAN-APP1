@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../user.service'
+import {UserService} from '../user.service'
 
 @Component({
   selector: 'app-register',
@@ -15,19 +15,26 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
   file:File;
+
   selectFile(event){
-    this.file=event.target.files[0];
-    //console.log(this.file)
+     this.file= event.target.files[0]
+    
   }
 
-  onSignup(userObj: any){
-    //create formdata obj
+
+
+  onSignup(userObj){
+
+    //create FOrmData obj
     let formData=new FormData();
     //add file
-    formData.append("photo",this.file,this.file.name);
-    //add userobj
+    formData.append("photo",this.file,this.file.name)
+    //add userObj
     formData.append("userObj",JSON.stringify(userObj))
+
+
     this.us.createUser(formData).subscribe(
       res=>{
         if(res.message==="User created"){

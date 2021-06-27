@@ -7,8 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
-import {HttpClientModule,HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AuthorizationService } from './authorization.service';
+import { SharedModule } from './shared.module';
+import { UsercartComponent } from './usercart/usercart.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { AuthorizationService } from './authorization.service';
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    UsercartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

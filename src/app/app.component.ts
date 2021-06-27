@@ -7,6 +7,7 @@ import { UserService } from './user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   // inject userservice obj
   constructor(public us:UserService){}
 
